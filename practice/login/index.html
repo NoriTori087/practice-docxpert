@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocXpert</title>
+    <link rel="shortcut icon" type="image/png" href="../image/logo.png" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <header>DocXpert<img class="logo" src="../image/logo.png" alt="" /></header>
+
+    <main>
+      <div class="form">
+        <div class="reg">
+          <h1>Регистрация</h1>
+          <form action="C:/OSPanel/domains/practice/main/pdf.php">
+            <div class="auth_place">
+              <label for="">Введите логин:</label><br />
+              <input type="text" name="LoginEmail" id="LoginEmail" placeholder=" login" /><br />
+            </div>
+
+            <div class="auth_place">
+              <label for="">Введите пароль:</label><br />
+              <input type="text" name="UserPassword" id="UserPassword" placeholder=" password" />
+            </div>
+
+            <div class="auth_place">
+              <label for="">Повторите пароль:</label><br />
+              <input type="text" placeholder="repeat password" />
+            </div>
+          </form>
+          <button class="btn">Зарегистрироваться</button>
+        </div>
+        <br><br>
+        <div class="log">
+          <h1>Авторизация</h1>
+          <form action="login.php" method="POST">
+              <div class="auth_place">
+                  <label for="LoginEmail">Введите логин:</label><br/>
+                  <input type="text" name="LoginEmail" id="LoginEmail" placeholder="login" /><br />
+              </div>
+      
+              <div class="auth_place">
+                  <label for="Password">Введите пароль:</label><br />
+                  <input type="password" name="UserPassword" id="UserPassword" placeholder="password" />
+              </div>
+              <div class="auth_place">
+                  <button class="btn" type="submit">Войти</button>
+              </div>
+          </form>
+      </div>      
+        <div class="slider">
+          <div class="buttons">
+            <button id="reg_button" class="btn">Войти</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><p>Support: docxpert@yahoo.com</p></footer>
+    <script src="index.js"> </script>
+  </body>
+</html>

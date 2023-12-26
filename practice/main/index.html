@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocXpert</title>
+    <link rel="shortcut icon" type="image/png" href="../image/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>DocXpert<img class="logo" src="../image/logo.png" alt="" /></header>
+
+      <main>
+        <div class="form">
+          <form action="pdf.php"  method="POST">
+            <h2>Сформировать счёт</h2><br>
+            <p>
+              <label for="number">Номер счёта: </label>
+              <input type="number" id="number" name="number" value="1"/>
+              <br>
+              <label for="date">Дата создания: </label>
+              <input type="date" id="date" name="date"/>
+              <script>
+                window.addEventListener('load', function (e) {
+                  var d = new Date();
+                  var day = d.getDate(); if (day<10) day='0'+day;
+                  var month = d.getMonth() + 1; if (month<10) month='0'+month;
+                  var year = d.getFullYear(); 
+                  document.getElementById("date").value = year+"-"+month+"-"+day;
+                }, false);
+              </script>
+            </p>
+            <br>
+            <p>
+              <label for="firstname"> Имя: </label>
+              <input type="text" id="firstname" name="firstname" placeholder="Ваше имя" />
+              <label for="lastname"> Фамилия: </label>
+              <input type="text" id="lastname" name="lastname" placeholder="Ваша фамилия"/>
+              <label for="surname"> Отчество: </label>
+              <input type="text" id="surname" name="surname" placeholder="Ваше отчество"/>
+            </p>
+            <p>
+              <label for="email"> Электронная почта: </label>
+              <input type="email" id="LoginEmail" name="LoginEmail" placeholder="email" />
+            </p>
+            <p>
+              <label for="itn">ИНН: </label>
+              <input type="text" id="itn" name="itn" placeholder="ИНН организации"/>
+              <label for="requisites">Номер банковского счёта: </label>
+              <input type="text" id="requisites" name="requisites" placeholder="0000 0000 0000 0000 0000" class="bank_account"/>
+            </p>
+            <br>
+            <p>
+              <label for="type_company">Ваша компания:</label>
+              <div class="select">
+                <select name="type_company" id="type_company" class="select_company">
+                  <option selected aria-placeholder="Не указано">
+                    Не указано
+                  </option>
+                  <option value="ООО">ООО</option>
+                  <option value="ООО">ООО</option>
+                <option value="ОАО">ОАО</option>
+                <option value="ПАО">ПАО</option>
+                <option value="АО">АО</option>
+                <option value="ИП">ИП</option>
+                </select>
+              </div>
+              <input type="text" id="company" name="company" placeholder="Название"/>
+            </p>
+            <br>
+            <p>
+              <label for="type_client">Клиент:</label>
+              <div class="select">
+                <select name="type_client" id="type_client" class="select_client">
+                  <option selected aria-placeholder="Не указано">
+                    Не указано
+                  </option>
+                  <option value="ООО">ООО</option>
+                  <option value="ОАО">ОАО</option>
+                  <option value="ПАО">ПАО</option>
+                  <option value="АО">АО</option>
+                  <option value="ИП">ИП</option>
+                </select>
+              </div>
+              <input type="text" id="client" name="client" placeholder="Название"/>
+            </p>
+            <br>
+            <div class="table">
+              <table>
+              <tbody>
+                <tr>
+                  <td>№</td>
+                  <td>Наименование товара или услуги</td>
+                  <td>Количество</td>
+                  <td>Цена</td>
+                  <td>Сумма</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><input type="text" id="td1" name="td1"/></td>
+                  <td><input type="text" id="td2" name="td2"/></td>
+                  <td><input type="text" id="td3" name="td3"/></td>
+                  <td><input type="text" id="td4" name="td4"/></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><input type="text" id="td1" name="td5"/></td>
+                  <td><input type="text" id="td1" name="td6"/></td>
+                  <td><input type="text" id="td1" name="td7"/></td>
+                  <td><input type="text" id="td1" name="td8"/></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <button type="submit" name="submit_btn" id="submit_btn" value="Отправить">Отправить</button>
+          </form>
+          
+        </div>
+      </main>
+
+      <footer><p>Support: docxpert@yahoo.com</p></footer>
+
+      <menu id="menu" class="menu">
+        <div id="humburger" class="humburger">
+          <span class="span"></span>
+        </div>
+
+        <div class="section">
+          <div class="photo"></div>
+        </div>
+
+        <ul>
+          <li><a href="index.html">Создать счёт</a></li>
+          <li><a href="#">Примеры счетов</a></li>
+          <li><a href="#">О нас</a></li>
+        </ul>
+
+        <p><a href="..\login\index.html"> <img class="logo" src="../image/log_out.png" alt="" /></a></p>
+      </menu>
+
+    </div>
+    <script src="index.js" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+  </body>
+</html>

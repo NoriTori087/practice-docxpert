@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rubik+Maps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Orbitron:wght@500&family=Rubik+Maps&display=swap');
+
+@media screen and (width <= 1024px) {
+  .form {
+    color: black;
+    display: flex;
+    align-content: center;
+    min-width: 400px;
+    min-height: 600px;
+    padding: 30px;
+    border-radius: 10%;
+    box-shadow: 0px 0px 20px 5px black;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-image: url('../image/back.jpg');
+  background-size: cover; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+header,
+footer {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background-color: #141414a2;
+  width: 100%;
+  height: 20px;
+  font-family: 'Orbitron';
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 40px;
+  z-index: 2;
+}
+
+header {
+  border-bottom: solid 7px #00000033;
+  padding: 5px;
+  z-index: 999;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  border-top: solid 7px #00000033;
+  min-height: 20px;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 17px;
+  font-weight: 300;
+  font-family: 'Montserrat Alternates';
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-content: center;
+  width: 400px;
+  flex-direction: column;
+  min-height: 600px;
+  padding: 30px;
+  border-radius: 30px;
+  position: relative;
+  line-height: 1.5;
+  box-shadow: 0px 0px 20px 5px black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  background:  linear-gradient(#5b4b61,#a297d3);
+  border: solid 3px #362b3b3f;
+  border-radius: 30px;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateY(-11%);
+  left: 0;
+  transition: 0.5s;
+}
+
+.slider_activ {
+  height: 43%;
+  transform: translateY(123%);
+  transition: 0.5s;
+}
+  
+.auth_place {
+  margin-bottom: 20px;
+}
+
+#reg_button {
+  transition: 0.5s;
+}
+
+#auth_btn {
+  width: 170px;
+  margin-top: 25px;
+  font-family: "Montserrat Alternates";
+  height: 30px;
+  font-size: 17px;
+}
+
+input {
+  width: 200px;
+  font-size: 17px;
+  font-family: 'Montserrat Alternates';
+  border-radius: 5px;
+  padding-left: 10px
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  width: auto;
+  height: 20px;
+  font-size: 17px;
+  font-family: "Montserrat Alternates";
+}
+
+button.btn {
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  transition: transform 0.15s;
+  transform-style: preserve-3d;
+}
+button.btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #00000023;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+button.btn:hover {
+  background: #ffe9e9;
+  transform: translate(0, 0.25em);
+}
+button.btn:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0#00000023;
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.btn:active {
+  background: #ffe9e9;
+  transform: translate(0em, 0.75em);
+}
+button.btn:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #00000023;
+  transform: translate3d(0, 0, -1em);
+}
